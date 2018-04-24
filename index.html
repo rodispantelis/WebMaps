@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>ΣΔΥ60 ΓΕ-5</title>
@@ -154,6 +153,15 @@ table, th {
 			display: none;
 			text-shadow: 2px 2px 4px black;
 }
+#robot{
+			position: absolute;
+			right: 15px;
+			bottom: 250px;
+			z-index: 1001;
+			background-color:white;
+			border-radius: 5px;
+			box-shadow: 3px 3px 4px grey;
+}
 .olControlAttribution {
             font-size: 10px;
             bottom: 5px;
@@ -188,7 +196,7 @@ table, th {
                     
                         <h1 style="cursor:pointer;color:blue;margin: 0; padding: 0;text-align: right;" onclick="help()">&#215;</h1>
                         <table><tr><td>
-									Η εφαρμογή έχει σαν σκοπό την χαρτογράφηση των προσβάσιμων δρόμων στην πόλη σας.
+									Η σελίδα παρουσιάζει μία εφαρμογή που έχει σαν σκοπό την χαρτογράφηση των προσβάσιμων δρόμων στην πόλη σας.
                                     Αφορά διαδρομές και σημεία πρόσβασης όπως διαβάσεις, πεζόδρομους και διόδους που 
                                     μπορούν να χρησιμοποιηθούν για να διευκολύνουν τη διέλευση πεζών, 
                                     ποδηλάτων και ατόμων που χρησιμοποιούν καροτσάκια για τη μετακίνηση τους.
@@ -197,7 +205,11 @@ table, th {
                                     ή ως μονοπάτια με τη χρήση των παρακάτω κουμπιών. Η κάθε διαδρομή και το κάθε σημείο που σχεδιάζετε
 									στο χάρτη έχει αξία για τους ανθρώπους που μπορούν να το χρησιμοποιήσουν και αυτό από την εφαρμογή
 									αποτιμάται σε πόντους για τους οποίους ενημερώνεστε με την αποθήκευση των δεδομένων.
-                                    <br>Μετά το τέλος της εργασίας πιέστε αποθήκευση και καλείστε
+                                    <br>
+									Αυτή η σελίδα απευθύνεται σε χρήστες desktop υπολογιστών για τους χρήστες κινητών υπάρχει αντίστοιχη 
+									<a href="https://drive.google.com/open?id=1Z6qBQB0hYxifQDXXzj0mN8QiEUcpByOg" target="_blank">
+									Android εφαρμογή.</a>
+									<br>Μετά το τέλος της εργασίας πιέστε αποθήκευση και καλείστε
                                     να απαντήσετε στο ερωτηματολόγιο σχετικά με την ευχρηστία της εφαρμογής. 
                                     Την εφαρμογή μπορείτε να την χρησιμοποιήσετε όσες φορές θέλετε 
                                     μέχρι τις 30 Απριλίου που λήγει η περίοδος δοκιμών. 
@@ -224,7 +236,7 @@ table, th {
                         <tr><td><img src="./theme/default/img/redo.png" alt=""></td>
                             <td>Redo. Αναίρεση διαγραφής τελευταίου σημείου σε διαδρομή</td></tr> 
                     </table>
-					<br>Η εφαρμογή αναπτύχθηκε στο πλαίσιο εργασίας για την Θεματική ενότητα ΣΔΥ60 του μεταπτυχιακού προγράμματος 
+					<br>Οι εφαρμογές αναπτύχθηκαν στο πλαίσιο εργασίας για την Θεματική ενότητα ΣΔΥ60 του μεταπτυχιακού προγράμματος 
 					<a href="https://www.eap.gr/el/programmata-spoudwn/415-sustima-diaxutou-upologismou/776-sustima-diaxutou-upologismou" target="_blank">
 					"Συστήματα Κινητού και Διάχυτου Υπολογισμού Msc (ΣΔΥ)"</a> του Ελληνικού Ανοικτού Πανεπιστημίου.
 					Η εργασία εκπονείτε από τους Ευαγγελία Μπαλτόγλου, Γιάννη Πριόβολο, Παντελή Ρόδη.				
@@ -246,9 +258,11 @@ table, th {
 	</div>
 	<h1 id="x" style="cursor:pointer;color:blue;margin: 0; padding: 0;text-align: right;" onclick="hide()">&nbsp;&#215;&nbsp;</h1>
 	<h1 id="inf" style="cursor:pointer;color:blue;margin: 0; padding: 0;text-align: right;" onclick="iicon()"><big>&#9432;</big></h1>
+	
+	<button id="robot" onclick="openw()"><img src="Android_robot.png" alt="Android"></button>
+	 
 <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
 <script>
-  // Αρχικοποίηση Firebase
   var config = {
     apiKey: "AIzaSyAtmbUQcmXeU5LhUlwlK2zjfGsb6kFh2EU",
     authDomain: "geo-matrix.firebaseapp.com",
@@ -259,14 +273,28 @@ table, th {
   };
   firebase.initializeApp(config);
 </script>		
+
+
+<script type="text/javascript">
+var sc_project=11693449; 
+var sc_invisible=1; 
+var sc_security="6051ad50"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11693449/0/6051ad50/1/" alt="Web
+Analytics"></a></div></noscript>
+
+
 <script>
     var map;
     var h=true;
     var neg=0;
-    var prop; //feature property value
-    
-	// Ορισμός επιπέδου που θα χρησιμοποιηθεί για την εμφάνιση των διαδρομών καθώς σχεδιάζονται
-	//Θα χρησιμπποιηθεί σαν επίπεδο προσωρινής αποθήκευσης
+    var prop;
     var vector = new OpenLayers.Layer.Vector('Vector Layer', {
         styleMap: new OpenLayers.StyleMap({
             temporary: OpenLayers.Util.applyDefaults({
@@ -296,6 +324,9 @@ table, th {
     var drawpoint=new OpenLayers.Control.DrawFeature(vector, OpenLayers.Handler.Point, {
             displayClass: 'olControlDrawFeaturePoint'		
 	});
+function openw(){
+	window.open("https://drive.google.com/open?id=1Z6qBQB0hYxifQDXXzj0mN8QiEUcpByOg", "_blank");
+}
 function hide(){
 	document.getElementById("cr").style.display='none';
 	document.getElementById("x").style.display='none';
@@ -317,10 +348,8 @@ function help(){
         document.getElementById("inst").style.display='none';
     }
 }
-	//Συνάρτηση αρχικοποίησης της εφαρμογής
 function init() {        
     toolbar.addControls([
-        //Προσθήκη στον χάρτη της toolbar των drawing tools
         new OpenLayers.Control({
             displayClass: 'olControlNavigation'
         }),
@@ -330,15 +359,12 @@ function init() {
         }),
 	drawpoint,
     drawpath        
-    ]);
-	//ορισμός επιπέδου χάρτη OpenStreetMap
-	
+    ]);	
     var wms = new OpenLayers.Layer.WMS('Ktimatologio WMS','http://gis.ktimanet.gr/wms/wmsopen/wmsserver.aspx',
 		{format: 'image/png', layers: 'baselayer', transparent: "false", antialias: 'full', opacity: 0.0});
     var osm = new OpenLayers.Layer.WMS( 'OSM-Overlay-WMS',
 		'https://ows.terrestris.de/osm/service?',
 		{format: 'image/png', layers: 'OSM-Overlay-WMS', transparent: "true", antialias: 'full', opacity: 0.0},{isBaseLayer: false});
-	//Ορισμός των παραμέτρων εμφάνισης του χάρτη
      map = new OpenLayers.Map({
         div: 'map',
         projection: 'EPSG:900913',
@@ -353,28 +379,25 @@ function init() {
         zoom: 16,
         theme: null
     });
-    //Ενεργοποίηση του toolbar
     toolbar.controls[0].activate();
-
-    //undo-redo handelers
     OpenLayers.Event.observe(document, "keydown", function(evt) {
         var handled = false;
         switch (evt.keyCode) {
-           case 90: // z
+           case 90:
               if (evt.metaKey || evt.ctrlKey) {
                 drawpath.undo();
                 neg++;
                 handled = true;
               }
               break;
-         case 89: // y
+         case 89:
               if (evt.metaKey || evt.ctrlKey) {
                 drawpath.redo();
                 neg++;
                 handled = true;
               }
              break;
-         case 27: // esc
+         case 27:
                 drawpath.cancel();
                 neg++;
                 handled = true;
@@ -387,7 +410,6 @@ function init() {
         }
 		
 function delast(){
-	//Αφάιρεση του πιο πρόσφατα σχεδιασμένου feature στο επίπεδο vector
 		vector.removeFeatures(vector.features[vector.features.length-1]);
                 neg++;
 	}
@@ -404,40 +426,32 @@ function cancel(){
             neg++;
         }
 function clearall(){
-	//Αφαίρεση όλων των διαδρομών και από τα δύο επίπεδα
             var ft1 = vector.features;
             neg=neg+ft1.length;
             vector.destroyFeatures();
 	}
         
-    //Συνάρτηση αποθήκευσης των διαδρομών	
 function savedraw(){
 	var features='';
-	var ft = vector.features;//Αποθήκευση των features σε μεταβλητή τύπου array
-	//Μετατροπή των features σε GeoJSON format
+	var ft = vector.features;
 	var geojson_format = new OpenLayers.Format.GeoJSON();
         features = geojson_format.write(ft, false);
-        //Δημιουργία στατιστικών
         var stats='{"Features":"'+ft.length+'"-"Corrections":"'+neg+'"}';
-
-	if(ft.length>0){//Εάν το array δεν είναι κενό προχωρά στην αποθήκευση
+	if(ft.length>0){
 		firebase.database().ref('stats/' + Date.now()).update({stats}, function(error) {
-		if (error) {//Έλεγχος για ολοκλήρωση της διαδικασίας
-			alert("Αποτυχία αποθήκευσης: " + error);//Εάν προκύψει σφάλμα εμφανίζεται κατάλληλο μήνυμα
+		if (error) {
+			alert("Αποτυχία αποθήκευσης: " + error);
 		}else{
-			alert("Επιτυχής αποθήκευση.");//Με την επιτυχή ολοκλήρωση εμφανίζεται κατάλληλο μήνυμα
+			alert("Επιτυχής αποθήκευση.");
 			for(i=0;i<ft.length;i++){
 			}
-			//Διαγράφονται τα αποθηκευμένα features από το επίπεδο vector ώστε να μπορούν να σχεδιαστούν νέα από το χρήστη
 		}
 		});
                 firebase.database().ref('features/' + Date.now()).update({features}, function(error){});
 	}else{
-	//Εάν το array είναι κενό τότε ο χρήστης δεν έχει σχεδιάσει πρώτα μία τουλάχιστον διαδρομή. Εμφανίζεται κατάλληλο μήνυμα
 		alert("Σχεδίαστε ένα μονοπάτι ή ένα σημείο και μετά πατήστε αποθήκευση.");
 	}
         neg=0;
-        //console.log('Features: '+ft.length+'-Corrections: '+neg);
 	}
 
 function Loc() {
@@ -451,15 +465,14 @@ function show(position) {
 	}
 function surv(){
     var features='';
-    var ft = vector.features;//Αποθήκευση των features σε μεταβλητή τύπου array
-	//Μετατροπή των features σε GeoJSON format
+    var ft = vector.features;
     var geojson_format = new OpenLayers.Format.GeoJSON();
     features = geojson_format.write(ft, false);
     var stats='{"Features":"'+ft.length+'"-"Corrections":"'+neg+'"}';
     
-    if(ft.length>0){//Αποθήκευση των features και μετάβαση στο ερωτηματολόγιο
+    if(ft.length>0){
         	firebase.database().ref('stats/' + Date.now()).update({stats}, function(error) {	
-		if (error) {//Έλεγχος για ολοκλήρωση της διαδικασίας
+		if (error) {
 						alert("Αποτυχία αποθήκευσης: " + error);
                 }else{
 				alert("Επιτυχής αποθήκευση. Κέρδίσατε "+ft.length*10+" πόντους.");//Με την επιτυχή ολοκλήρωση εμφανίζεται κατάλληλο μήνυμα
@@ -476,8 +489,7 @@ function surv(){
 function sel(){
     prop=smenu.value;
 }
-	init();	//Αρχικοποίηση της εφαρμογής
+	init();
 </script>
 </body>
 </html>
-
